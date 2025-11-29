@@ -144,6 +144,7 @@ const deleteItem = (index: number) => {
   width: 100%;
   height: 100%;
   overflow-y: auto; //部分电脑高度未必为1080 兜底操作
+  box-shadow: 0 2px 20px 0 rgba(19, 67, 112, 0.15);
   @media (max-width: 1400px) {
     overflow: hidden;
     min-height: 922px;
@@ -246,6 +247,16 @@ const deleteItem = (index: number) => {
   border-radius: 8px;
   font-size: 24px;
   font-weight: 400;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #3771ff;
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(27, 90, 255, 0.28);
+    background: #1a52e6;
+  }
 }
 button:disabled {
   opacity: 0.5;
